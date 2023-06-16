@@ -1,0 +1,98 @@
+h1 {
+    color: #e2e2e2;
+    font-family: "Eau Naturelle", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+    -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0, 0, 0, 0.021));
+}
+
+#canvas {
+    outline: 9.5px solid rgb(224, 124, 10);
+    outline-offset: -7.5px;
+    background-color: #FFF;
+    box-shadow: 1px 3px 10px 1px rgb(0, 0, 0);
+    display: inline;
+    touch-action: none;
+}
+
+#wavy{
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    position: relative;
+}
+
+#wavy span{
+    position: relative;
+    display: inline-block;
+    animation: animate 4.5s ease-in-out infinite, delay-animation 2000ms linear infinite;;
+    animation-delay: calc(0.05s * var(--i));
+}
+
+@keyframes animate {
+    0%
+    {        
+        transform: translateY(0px);
+    }
+    6.66%
+    {        
+        transform: translateY(-4px);
+    }
+    13.33%,33.33%
+    {        
+        transform: translateY(0px);
+    }
+}
+
+@keyframes delay-animation {
+    0% {
+        /* transform: translateX(0px); */
+    }
+    50% {
+        /* transform: translateX(0px); */
+    }
+    50.01% {
+        /* transform: translateX(0px); */
+    }
+    100% {
+        /* transform: translateX(0px); */
+    }
+  }
+
+/* #predict:hover{
+    background-color: #c5c5c5 !important;
+} */
+
+/* #predict:hover, #predict:active{
+    background-color: rgb(235, 113, 32) !important;
+} */
+
+/* body {
+    font-family: "Eau Naturelle", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+    font-weight: 100;
+    color: #444;
+}
+
+p {
+    color: #999999;
+}
+
+
+
+#MyChart {
+    display: inline;
+}
+
+#d {
+    text-align: center;
+    margin-inline: auto;
+}
+
+
+#predict{
+    width: 80px;
+    height: 30px;
+}
+
+#clear{
+    width: 80px;
+    height: 30px;
+} */
