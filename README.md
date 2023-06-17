@@ -1,4 +1,8 @@
-# CifarWebProject
+# DigitRecognition
+
+This project is a handwritten digit recognition that consumes an API with a trained model with the MNIST dataset.
+
+Code used for the model training: https://colab.research.google.com/drive/1biPbIQu1BUoAM6paDONu9lz9foz6q8R8?usp=sharing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
