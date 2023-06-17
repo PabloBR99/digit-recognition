@@ -65,7 +65,7 @@ export class DrawingComponent {
 
     this.cx.lineWidth = 10;
     this.cx.lineCap = 'round';
-    this.cx.strokeStyle = 'rgb(39, 39, 39)';
+    this.cx.strokeStyle = 'rgb(255, 255, 255)';
 
     this.init_pixels();
 
