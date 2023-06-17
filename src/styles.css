@@ -8,5 +8,6 @@
 
 html{
     background-color: rgb(41, 41, 41);
-    -webkit-font-smoothing: subpixel-antialiased
+    -webkit-font-smoothing: subpixel-antialiased;
+    user-select: none;
 }
