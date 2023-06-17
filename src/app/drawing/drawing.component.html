@@ -44,10 +44,10 @@
         </div>
         <!-- CLEAR -->
         <div>
-          <a href="#DrawingCanvas" class="flex"><button id="clear" *ngIf="this.digit.length > 0" [@inOutAnimation]
+          <button id="clear" *ngIf="this.digit.length > 0" [@inOutAnimation]
             class="text-gray-light hover:text-gray active:text-orange active:translate-y-0.5 font-bold h-6 text-xs font-light drop-shadow-xl ml-auto flex mt-2"
             (click)="this.clear()">Clear <span id="clear-icon"
-              class="text-lg material-icons ml-1 -mt-1.5">clear</span></button></a>
+              class="text-lg material-icons ml-1 -mt-1.5">clear</span></button>
         </div>
       </div>
     </div>
