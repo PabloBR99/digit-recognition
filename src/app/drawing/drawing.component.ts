@@ -38,8 +38,8 @@ export class DrawingComponent {
 
   @ViewChild('canvas') public canvas: ElementRef | undefined;
 
-  @Input() public width = 28 * 9;
-  @Input() public height = 28 * 9;
+  @Input() public width = 28 * 8;
+  @Input() public height = 28 * 8;
 
   public predicting: boolean = false;
   private cx: CanvasRenderingContext2D | undefined;
@@ -171,7 +171,7 @@ export class DrawingComponent {
 
   fill_pixels(x: number, y: number) {
     // console.log('hola', x)
-      this.pixels[Math.round(y / 9)][Math.round(x / 9)] = 1;
+      this.pixels[Math.round(y / 8)][Math.round(x / 8)] = 1;
       this.digit = []
       for (var i = 0; i < this.pixels.length; i++) {
         for (var j = 0; j < this.pixels.length; j++) {
@@ -201,7 +201,7 @@ export class DrawingComponent {
       this.cx.lineTo(prevPos.x, prevPos.y);
       this.cx.stroke();
     }
-    console.log('x: ' + Math.floor(currentPos.x / 9) + '\n' + 'y: ' + Math.floor(currentPos.y / 9))
+    // console.log('x: ' + Math.floor(currentPos.x / 8) + '\n' + 'y: ' + Math.floor(currentPos.y / 8))
     this.fill_pixels(currentPos.x, currentPos.y)
     // this.pixels[Math.round(currentPos.y / 9)][Math.round(currentPos.x / 9)] = 1;
     // this.digit = []
@@ -237,7 +237,7 @@ export class DrawingComponent {
 
 
   clear() {
-    this.cx?.clearRect(1, 1, 28 * 9, 28 * 9);
+    this.cx?.clearRect(1, 1, 28 * 8, 28 * 8);
     this.cx?.closePath();
     this.init_pixels()
     this.digit = []
