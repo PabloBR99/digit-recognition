@@ -58,12 +58,12 @@ export class DrawingComponent {
     canvasEl.width = this.width;
     canvasEl.height = this.height;
 
-    canvasEl.style.width = "252px";
-    canvasEl.style.height = "252px";
+    canvasEl.style.width = "224px";
+    canvasEl.style.height = "224px";
 
     if (!this.cx) throw 'Cannot get context';
 
-    this.cx.lineWidth = 10;
+    this.cx.lineWidth = 8;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = 'rgb(255, 255, 255)';
 

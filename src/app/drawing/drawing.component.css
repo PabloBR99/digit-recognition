@@ -5,9 +5,9 @@ h1 {
 }
 
 #canvas {
-    outline: 9.5px solid rgb(224, 124, 10);
-    outline-offset: -3px;
-    background-color: rgb(54, 99, 50);
+    outline: 8.5px solid rgb(219, 106, 30);
+    outline-offset: -5px;
+    background-color: rgb(48, 88, 44);
     box-shadow: 1px 3px 10px 1px rgb(0, 0, 0);
     display: inline;
     touch-action: none;
@@ -25,6 +25,7 @@ h1 {
     display: inline-block;
     animation: animate 4.5s ease-in-out infinite, delay-animation 2000ms linear infinite;;
     animation-delay: calc(0.05s * var(--i));
+    margin-inline: 0.3px !important;
 }
 
 @keyframes animate {

@@ -3,9 +3,9 @@
   <div class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 px-2/6 pt-8 m-auto">
     <div></div>
     <!-- col1 -->
-    <div class="mx-auto lg:ml-auto lg:mr-12 snap-center" style="max-width: 252px;" id="DrawingCanvas">
-      <p class="text-center text-gray-light mb-2" id="wavy">
-        <span style="--i:1;" class="material-icons text-lg translate-y-0.5 text-gray-light">mode_edit </span>
+    <div class="mx-auto lg:ml-auto lg:mr-12 snap-center" style="max-width: 224px;" id="DrawingCanvas">
+      <p class="text-center text-gray-light mb-2 tracking-wide font-medium" id="wavy">
+        <span><a class="material-icons text-2lg text-gray-light translate-y-0.5">draw </a></span>
         <span class="w-1"></span>
         <span style="--i:1;"> C</span>
         <span style="--i:2;">l</span>
@@ -16,7 +16,7 @@
         <span style="--i:4;">a</span>
         <span style="--i:4;">n</span>
         <span style="--i:5;">d </span>
-        <span class="w-1"></span>
+        <span class="w-0.5"></span>
         <span style="--i:6;">d</span>
         <span style="--i:6;">r</span>
         <span style="--i:7;">a</span>
@@ -32,7 +32,7 @@
         <span style="--i:11;">!</span>
       </p>      <!-- CANVAS -->
       <div>
-        <canvas width="252" height="252" id="canvas" #canvas></canvas>
+        <canvas id="canvas" #canvas></canvas>
       </div>
       <!-- BUTTONS -->
       <div class="mt-4 grid grid-cols-2 static h-7 mb-4">
