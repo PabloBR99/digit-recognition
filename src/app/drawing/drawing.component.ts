@@ -38,8 +38,8 @@ export class DrawingComponent {
 
   @ViewChild('canvas') public canvas: ElementRef | undefined;
 
-  @Input() public width = 28 * 8;
-  @Input() public height = 28 * 8;
+  @Input() public width = 28 * 7;
+  @Input() public height = 28 * 7;
 
   public predicting: boolean = false;
   private cx: CanvasRenderingContext2D | undefined;
@@ -58,12 +58,12 @@ export class DrawingComponent {
     canvasEl.width = this.width;
     canvasEl.height = this.height;
 
-    canvasEl.style.width = "224px";
-    canvasEl.style.height = "224px";
+    canvasEl.style.width = "196";
+    canvasEl.style.height = "196";
 
     if (!this.cx) throw 'Cannot get context';
 
-    this.cx.lineWidth = 8;
+    this.cx.lineWidth = 7;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = 'rgb(255, 255, 255)';
 
@@ -171,7 +171,7 @@ export class DrawingComponent {
 
   fill_pixels(x: number, y: number) {
     // console.log('hola', x)
-      this.pixels[Math.round(y / 8)][Math.round(x / 8)] = 1;
+      this.pixels[Math.round(y / 7)][Math.round(x / 7)] = 1;
       this.digit = []
       for (var i = 0; i < this.pixels.length; i++) {
         for (var j = 0; j < this.pixels.length; j++) {
@@ -237,7 +237,7 @@ export class DrawingComponent {
 
 
   clear() {
-    this.cx?.clearRect(1, 1, 28 * 8, 28 * 8);
+    this.cx?.clearRect(1, 1, 28 * 7, 28 * 7);
     this.cx?.closePath();
     this.init_pixels()
     this.digit = []
