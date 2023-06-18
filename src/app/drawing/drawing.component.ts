@@ -63,7 +63,7 @@ export class DrawingComponent {
 
     if (!this.cx) throw 'Cannot get context';
 
-    this.cx.lineWidth = 9;
+    this.cx.lineWidth = 10;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = 'rgb(255, 255, 255)';
 
