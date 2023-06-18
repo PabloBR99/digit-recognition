@@ -272,7 +272,7 @@ export class DrawingComponent {
       }
 
     });
-    this.chart.canvas.parentNode.style.width = '300px';
+    this.chart.canvas.parentNode.style.width = '278px';
   };
 
 }
