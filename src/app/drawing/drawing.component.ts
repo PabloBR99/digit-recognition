@@ -217,12 +217,8 @@ export class DrawingComponent {
     console.log(this.digit);
     const headers = new Headers();
     const data = JSON.stringify({'pixels': this.digit })
-    headers.append('key', 'AIzaSyBmI_OvOzVR9NYyuQPe4G0tu_UWMGUD_rw');
-    headers.append('Content-Type','application/json');
-    headers.append('Access-Control-Allow-Origin', '*');
-    this.http.post<number[]>('https://mnist-389813.uw.r.appspot.com/predict', data, {
+    this.http.post<number[]>('https://mnist-api-830cf7012d80.herokuapp.com/predict', data, {
       headers: {
-        'key': 'AIzaSyBmI_OvOzVR9NYyuQPe4G0tu_UWMGUD_rw',
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       }
