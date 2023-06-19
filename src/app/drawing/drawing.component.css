@@ -6,7 +6,7 @@ h1 {
 
 #canvas {
     outline: 8.5px solid rgb(219, 106, 30);
-    outline-offset: -5px;
+    outline-offset: -7.5px;
     background-color: rgb(48, 88, 44);
     box-shadow: 1px 3px 10px 1px rgb(0, 0, 0);
     display: inline;
