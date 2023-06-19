@@ -220,7 +220,7 @@ export class DrawingComponent {
     const data = JSON.stringify({'pixels': this.digit })
     const url = 'https://mnist-api-830cf7012d80.herokuapp.com/predict'
     const url2 = 'http://localhost:5000/predict'
-    this.http.post<number[]>(url2, data, {
+    this.http.post<number[]>(url, data, {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
