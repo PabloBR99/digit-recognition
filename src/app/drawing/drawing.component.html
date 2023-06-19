@@ -37,7 +37,7 @@
       <!-- BUTTONS -->
       <div class="mt-4 grid grid-cols-2 static h-7 mb-4">
         <!-- PREDICT -->
-        <div class="flex"><a href="#chart_div" class="h-7"><button *ngIf="this.digit.length > 0" [@inOutAnimation]
+        <div class="flex"><a href="#chart_div" class="h-7"><button [disabled]="predicting" *ngIf="this.digit.length > 0" [@inOutAnimation]
             class="text-white font-semibold rounded-lg bg-orange sm:hover:bg-gray-light active:bg-orange active:translate-y-0.5 w-24 h-7 text-xs font-light drop-shadow-2xl mr-2"
             id="predict" (click)="this.makePrediction()">{{ this.predicting ? "Predicting..." : "Predict"
             }}</button></a><span *ngIf="predicting" class="text-lg material-icons animate-spin text-orange h-7">loop</span>
