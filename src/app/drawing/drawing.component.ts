@@ -3,6 +3,7 @@ import { catchError, delay, fromEvent, of, pairwise, switchMap, takeUntil } from
 import { HttpClient } from '@angular/common/http';
 import Chart from 'chart.js/auto';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { NgPlural } from '@angular/common';
 
 @Component({
   selector: 'app-drawing',
@@ -63,7 +64,7 @@ export class DrawingComponent {
 
     if (!this.cx) throw 'Cannot get context';
 
-    this.cx.lineWidth = 7;
+    this.cx.lineWidth = 6;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = 'rgb(255, 255, 255)';
 
@@ -218,7 +219,8 @@ export class DrawingComponent {
     const headers = new Headers();
     const data = JSON.stringify({'pixels': this.digit })
     const url = 'https://mnist-api-830cf7012d80.herokuapp.com/predict'
-    this.http.post<number[]>(url, data, {
+    const url2 = 'http://localhost:5000/predict'
+    this.http.post<number[]>(url2, data, {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
