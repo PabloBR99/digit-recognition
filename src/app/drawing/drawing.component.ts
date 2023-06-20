@@ -64,7 +64,7 @@ export class DrawingComponent {
 
     if (!this.cx) throw 'Cannot get context';
 
-    this.cx.lineWidth = 7.5;
+    this.cx.lineWidth = 7;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = 'rgb(255, 255, 255)';
 
@@ -171,8 +171,19 @@ export class DrawingComponent {
   }
 
   fill_pixels(x: number, y: number) {
-    // console.log('hola', x)
+
       this.pixels[Math.round(y / 7)][Math.round(x / 7)] = 1;
+      
+      // this.pixels[Math.round(y / 7) + 1][Math.round(x / 7) + 1] = 0.2;
+      // this.pixels[Math.round(y / 7) - 1][Math.round(x / 7) - 1] = 0.2;
+      // this.pixels[Math.round(y / 7) - 1][Math.round(x / 7) + 1 ] = 0.2;
+      // this.pixels[Math.round(y / 7) + 1][Math.round(x / 7) - 1] = 0.2;
+
+      // this.pixels[Math.round(y / 7) + 1][Math.round(x / 7)] = 0.1;
+      // this.pixels[Math.round(y / 7) - 1][Math.round(x / 7)] = 0.1;
+      // this.pixels[Math.round(y / 7)][Math.round(x / 7) + 1 ] = 0.1;
+      // this.pixels[Math.round(y / 7)][Math.round(x / 7) - 1] = 0.1;
+
       this.digit = []
       for (var i = 0; i < this.pixels.length; i++) {
         for (var j = 0; j < this.pixels.length; j++) {
